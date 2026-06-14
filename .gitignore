@@ -1,3 +1,18 @@
+# SAFETY: this repo publishes to a PUBLIC GitHub Pages repo.
+# Whitelist approach — ignore EVERYTHING, then re-include only the website files.
+# Anything else in this folder (business notes, financials, pricing, IP, CLAUDE.md)
+# stays a private local workspace and is never committed/published.
+
+/*
+!/.gitignore
+!/index.html
+!/favicon.svg
+!/CNAME
+!/README.md
+
+# Belt-and-braces: never publish these even if a rule above is loosened.
+CLAUDE.md
 node_modules/
 .DS_Store
 Thumbs.db
+.env
