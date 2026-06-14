@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>High Velocity Limited — Fractional CIO / CTO &amp; AI Consulting</title>
+<meta name="description" content="High Velocity Limited provides fractional CIO and CTO leadership, AI strategy consulting and hands-on AI implementation for ambitious organisations.">
+<meta name="theme-color" content="#0B1B2E">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="High Velocity Limited — Senior technology leadership, on demand">
+<meta property="og:description" content="Fractional CIO / CTO leadership, AI strategy and hands-on AI implementation for ambitious organisations.">
+<meta property="og:url" content="https://highvelocity.world/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0B1B2E;        /* deep navy */
+    --ink-soft:#16304b;
+    --paper:#F4F1EA;      /* warm off-white */
+    --paper-pure:#FBFAF6;
+    --accent:#FF5A36;     /* velocity orange */
+    --accent-deep:#E8431F;
+    --muted:#5A6B7B;
+    --line:rgba(11,27,46,.12);
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent-deep);font-weight:500;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(140%) blur(10px);
+    background:rgba(244,241,234,.78);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.01em;font-size:18px}
+  .mark{
+    width:30px;height:30px;flex:0 0 auto;display:grid;place-items:center;
+    background:var(--ink);color:#fff;border-radius:7px;
+    font-family:"Fraunces",serif;font-weight:600;font-size:15px;
+    position:relative;overflow:hidden;
+  }
+  .mark::after{ /* velocity streak */
+    content:"";position:absolute;left:-40%;top:0;width:40%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,90,54,.9),transparent);
+    transform:skewX(-20deg);animation:streak 4.5s var(--ease) infinite;
+  }
+  @keyframes streak{0%,70%{left:-40%}85%,100%{left:140%}}
+  nav.links{display:flex;gap:30px;align-items:center}
+  nav.links a{font-size:15px;color:var(--ink);opacity:.78;transition:opacity .2s}
+  nav.links a:hover{opacity:1}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:600;font-size:15px;padding:11px 20px;border-radius:8px;
+    transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .2s;
+    cursor:pointer;white-space:nowrap;
+  }
+  .btn-accent{background:var(--accent);color:#fff;box-shadow:0 6px 18px -6px rgba(255,90,54,.65)}
+  .btn-accent:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(255,90,54,.7);background:var(--accent-deep)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn .arr{transition:transform .2s var(--ease)}
+  .btn:hover .arr{transform:translateX(3px)}
+  @media(max-width:780px){nav.links a:not(.btn){display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:96px 0 84px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+  /* diagonal speed lines */
+  .hero-bg::before{
+    content:"";position:absolute;inset:-10% -10%;
+    background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(11,27,46,.035) 38px 39px);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;right:-12%;top:-30%;width:60%;height:160%;
+    background:radial-gradient(closest-side,rgba(255,90,54,.12),transparent 70%);
+    filter:blur(8px);
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(40px,6.4vw,76px);max-width:16ch;margin:20px 0 0}
+  .hero h1 .hl{color:var(--accent-deep);font-style:italic}
+  .hero p.lead{font-size:clamp(18px,2.2vw,22px);color:var(--muted);max-width:54ch;margin:26px 0 0;line-height:1.55}
+  .hero .cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:54px;padding-top:26px;border-top:1px solid var(--line)}
+  .trust span{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.04em;color:var(--muted)}
+  .trust b{color:var(--ink);font-weight:600}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(18px);animation:rise .8s var(--ease) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}.d5{animation-delay:.55s}
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding:84px 0}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-size:clamp(30px,4vw,46px);margin:14px 0 0}
+  .sec-head p{color:var(--muted);font-size:18px;margin-top:16px}
+
+  /* ---------- Services ---------- */
+  #services{background:var(--ink);color:#EAF0F6}
+  #services .eyebrow{color:var(--accent)}
+  #services h2{color:#fff}
+  #services .sec-head p{color:#9FB2C4}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+  @media(max-width:880px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px 28px 32px;
+    transition:transform .3s var(--ease),border-color .3s,background .3s;position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--accent);transition:width .4s var(--ease);
+  }
+  .card:hover{transform:translateY(-6px);border-color:rgba(255,90,54,.5)}
+  .card:hover::before{width:100%}
+  .card .num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--accent);letter-spacing:.1em}
+  .card h3{font-size:25px;margin:18px 0 12px;color:#fff}
+  .card p{color:#A9BACB;font-size:15.5px;line-height:1.6}
+  .card ul{list-style:none;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+  .card li{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.03em;color:#cdd8e4;
+    border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:5px 11px}
+
+  /* ---------- Approach ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:54px}
+  @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.steps{grid-template-columns:1fr}}
+  .step{border-top:2px solid var(--ink);padding-top:18px}
+  .step .n{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--accent-deep);font-weight:500}
+  .step h3{font-size:22px;margin:12px 0 8px}
+  .step p{color:var(--muted);font-size:15.5px}
+
+  /* ---------- About ---------- */
+  #about{background:var(--paper-pure);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:start}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:34px}}
+  #about p.body{font-size:18px;line-height:1.7;margin-top:18px;color:#33424f}
+  .facts{display:flex;flex-direction:column;gap:0}
+  .fact{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .fact:first-child{border-top:1px solid var(--line)}
+  .fact .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .fact .v{font-weight:600;text-align:right}
+
+  /* ---------- Contact ---------- */
+  #contact{position:relative;overflow:hidden;background:var(--ink);color:#fff;text-align:center}
+  #contact::before{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.025) 46px 47px)}
+  #contact .wrap{position:relative;z-index:1}
+  #contact .eyebrow{color:var(--accent)}
+  #contact h2{font-size:clamp(32px,5vw,58px);color:#fff;margin:14px auto 0;max-width:18ch}
+  #contact p{color:#9FB2C4;font-size:19px;max-width:50ch;margin:20px auto 0}
+  #contact .cta{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  #contact .btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+  #contact .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+  /* ---------- Footer ---------- */
+  footer{background:#071321;color:#8095a8;padding:54px 0 40px;font-size:13.5px}
+  .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;
+    padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-top .brand{color:#fff;font-size:17px}
+  .foot-nav{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-nav a{color:#8095a8;transition:color .2s}
+  .foot-nav a:hover{color:#fff}
+  .statutory{margin-top:24px;line-height:1.7;max-width:74ch;color:#6b7e90}
+  .statutory b{color:#9fb2c4;font-weight:600}
+  .foot-bottom{margin-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#5d7185}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="High Velocity Limited home">
+      <span class="mark">HV</span>
+      <span>High&nbsp;Velocity</span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a class="btn btn-accent" href="#contact">Get in touch <span class="arr">&rarr;</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow reveal d1">Fractional CIO / CTO &nbsp;·&nbsp; AI Strategy &amp; Implementation</p>
+      <h1 class="reveal d2">Senior technology leadership, at <span class="hl">high velocity</span>.</h1>
+      <p class="lead reveal d3">High Velocity Limited helps ambitious organisations set their technology and AI direction — and actually deliver it — without the cost or commitment of a full-time executive.</p>
+      <div class="cta reveal d4">
+        <a class="btn btn-accent" href="#contact">Start a conversation <span class="arr">&rarr;</span></a>
+        <a class="btn btn-ghost" href="#services">Explore services</a>
+      </div>
+      <div class="trust reveal d5">
+        <span><b>Independent</b> &nbsp;— no vendor lock-in, no reselling</span>
+        <span><b>Board-level</b> &nbsp;— strategy through to delivery</span>
+        <span><b>Fractional</b> &nbsp;— scaled to what you need</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Three ways High Velocity moves your business forward.</h2>
+        <p>We work with clients across sectors — from scale-ups to established enterprises — bringing the senior technology leadership they need, exactly when they need it.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Fractional CIO / CTO</h3>
+          <p>Board-level technology leadership on a part-time, ongoing or interim basis. We own the strategy, governance, roadmap, budget and delivery — giving you executive firepower without a full-time hire.</p>
+          <ul><li>Technology strategy</li><li>Team &amp; vendors</li><li>Governance</li><li>Delivery</li></ul>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>AI Strategy Consulting</h3>
+          <p>Cut through the hype. We give you a clear, commercially-grounded view of where AI creates real value in your business, what to do first, and how to adopt it safely and responsibly.</p>
+          <ul><li>AI roadmaps</li><li>Use-case discovery</li><li>Risk &amp; governance</li><li>ROI</li></ul>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>AI Implementation</h3>
+          <p>From proof of concept to production. Hands-on delivery of AI and automation solutions that ship, integrate with your systems, and earn their keep — built to last beyond the engagement.</p>
+          <ul><li>Solution design</li><li>Build &amp; integrate</li><li>Automation</li><li>Enablement</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How we work</p>
+        <h2>Strategy that turns into working software.</h2>
+        <p>Every engagement is run as an independent, outcome-focused project. We bring our own approach, tools and standards — and we leave your team stronger than we found it.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3>Understand</h3><p>We start with your commercial goals and constraints — not the technology.</p></div>
+        <div class="step"><div class="n">02</div><h3>Prioritise</h3><p>A pragmatic roadmap, sequenced by business value and risk.</p></div>
+        <div class="step"><div class="n">03</div><h3>Deliver</h3><p>Senior, hands-on execution — decisions made and outcomes shipped.</p></div>
+        <div class="step"><div class="n">04</div><h3>Embed</h3><p>We hand over cleanly, leaving your business self-sufficient.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">About</p>
+        <h2>An independent technology consultancy.</h2>
+      </div>
+      <div class="about-grid" style="margin-top:34px">
+        <div>
+          <p class="body">High Velocity Limited is an independent consultancy led by <b>Martin Williams</b>, a technology leader with extensive experience taking organisations from strategy to delivery.</p>
+          <p class="body">We partner with a portfolio of clients — never tied to a single engagement or vendor — providing the impartial, senior perspective that comes from working across many businesses. We bring our own methods, equipment and professional indemnity cover, and we are accountable for the outcomes we deliver, not the hours we spend.</p>
+          <p class="body">If you need to move quickly, decisively and safely on technology and AI, that is exactly what we are built for.</p>
+        </div>
+        <div class="facts" aria-label="Company facts">
+          <div class="fact"><span class="k">Entity</span><span class="v">High Velocity Limited</span></div>
+          <div class="fact"><span class="k">Company no.</span><span class="v">15734101</span></div>
+          <div class="fact"><span class="k">Based</span><span class="v">Winchester, UK</span></div>
+          <div class="fact"><span class="k">Engagements</span><span class="v">Remote &amp; on-site (UK)</span></div>
+          <div class="fact"><span class="k">Status</span><span class="v">Independent · impartial</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's talk about where you're heading.</h2>
+      <p>Tell us about your goals and the challenge in front of you. We'll come back with an honest view on whether — and how — High Velocity can help.</p>
+      <div class="cta">
+        <a class="btn btn-accent" href="mailto:info@highvelocity.world?subject=Enquiry%20via%20highvelocity.world">Email us <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top"><span class="mark">HV</span><span>High Velocity</span></a>
+      <nav class="foot-nav">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="mailto:info@highvelocity.world">Email</a>
+      </nav>
+    </div>
+    <p class="statutory">
+      <b>High Velocity Limited</b> is a company registered in England &amp; Wales.
+      Company registration number 15734101.
+      Registered office: Innovations House, 19 Staple Gardens, Winchester, Hampshire SO23 8SR.
+    </p>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> High Velocity Limited. All rights reserved.</span>
+      <span>highvelocity.world</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
