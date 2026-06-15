@@ -1,7 +1,7 @@
 # High Velocity Limited — website
 
 A single self-contained file: **`index.html`** (all CSS/JS inline, fonts from Google).
-No build step. Open it in a browser to preview; upload it to any host to publish.
+No build step. Open it in a browser to preview; `git push` to publish (see below).
 
 ## Preview locally
 
@@ -34,31 +34,24 @@ hours**, and full **statutory details** (registered company name, number, regist
 office) in the footer. It's supporting evidence, not a silver bullet — keep it true to
 how the business actually operates.
 
-## Publishing — Cloudflare Pages (chosen route)
+## Publishing — GitHub Pages (live)
 
-GoDaddy only offers a non-editable "Coming Soon" page for free, and £48/year for real
-hosting — so we're hosting the static site on **Cloudflare Pages** (free, fast, global
-CDN, automatic HTTPS, CLI deploys) and keeping GoDaddy purely as the domain registrar.
+The site is **live at https://highvelocity.world** (HTTPS enforced), hosted free on
+**GitHub Pages**. GoDaddy is the domain registrar only — its free product is a
+non-editable "Coming Soon" page, and Cloudflare's wrangler CLI won't install on this
+Windows ARM64 machine, so GitHub Pages was the chosen route.
 
-### One-time setup
-1. Create a free Cloudflare account.
-2. From this folder, deploy:
-   ```powershell
-   npx wrangler login
-   npx wrangler pages deploy . --project-name high-velocity
-   ```
-   This publishes to a `*.pages.dev` URL immediately.
-
-### Custom domain (highvelocity.world)
-Two ways to point the GoDaddy domain at Cloudflare Pages:
-
-- **Option 1 — keep GoDaddy DNS (least disruptive):** in Cloudflare Pages → Custom
-  domains, add `highvelocity.world`; Cloudflare gives you a CNAME/records to add in
-  GoDaddy's DNS panel. Existing email (MX) records stay untouched.
-- **Option 2 — move nameservers to Cloudflare (best performance):** add the domain to
-  Cloudflare, switch GoDaddy's nameservers to the two Cloudflare ones. **Important:**
-  first re-create any existing **MX / email records** in Cloudflare so `info@highvelocity.world`
-  keeps working.
-
-### Redeploying after edits
-Just re-run `npx wrangler pages deploy . --project-name high-velocity`.
+- **Repo:** `tinwilly2/highvelocity-website` (public), branch `master`, served from the
+  repo root. This `website/` folder *is* that repo.
+- **Deploy / update:** edit files here, then:
+  ```powershell
+  git add -A
+  git commit -m "your message"
+  git push origin master
+  ```
+  Pages republishes within a minute or two.
+- **Custom domain:** the `CNAME` file pins `highvelocity.world`. GoDaddy DNS holds four
+  apex A records to GitHub Pages (185.199.108.153, .109.153, .110.153, .111.153) plus a
+  `www` CNAME to `tinwilly2.github.io`.
+- **HTTPS:** GitHub auto-issued a free Let's Encrypt certificate and "Enforce HTTPS" is on,
+  so `http://` is 301-redirected to `https://` for all visitors.
